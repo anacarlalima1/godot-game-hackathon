@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://ce2b215fqxjil"]
+
+[ext_resource type="Texture2D" uid="uid://cb1bap5anlw2k" path="res://sprites-bedroom/piso.png" id="1_vd4eq"]
+[ext_resource type="Texture2D" uid="uid://02bhbglp4w3e" path="res://sprites-bedroom/porta.png" id="3_7tobb"]
+[ext_resource type="Texture2D" uid="uid://dlyag7n57pk2l" path="res://sprites-bedroom/parede.png" id="3_hl421"]
+[ext_resource type="Texture2D" uid="uid://dkcjnjbq62yt0" path="res://sprites-bedroom/moldura.png" id="4_dmmha"]
+[ext_resource type="Texture2D" uid="uid://d24e2lhrdkc5e" path="res://sprites-bedroom/poster.png" id="5_oxgb3"]
+[ext_resource type="Texture2D" uid="uid://dit0rvux0sws" path="res://sprites-bedroom/armario.png" id="6_0i7ka"]
+[ext_resource type="Texture2D" uid="uid://bbgrjs8aui6a8" path="res://sprites-bedroom/janela.png" id="6_xi74y"]
+[ext_resource type="Texture2D" uid="uid://dn22gcmacr3h" path="res://sprites-bedroom/cama.png" id="7_pb6jm"]
+[ext_resource type="Texture2D" uid="uid://becd7qwo0qops" path="res://sprites-bedroom/escrivaninha.png" id="8_ugkat"]
+[ext_resource type="Texture2D" uid="uid://dkx5swbjnjjjm" path="res://sprites-bedroom/computador.png" id="9_raq40"]
+[ext_resource type="Texture2D" uid="uid://db5ax5uejyvl" path="res://sprites-bedroom/cadeira.png" id="10_ydkvt"]
+[ext_resource type="Texture2D" uid="uid://bwuy6uxt3y51q" path="res://sprites-bedroom/cacto.png" id="11_5eeb2"]
+[ext_resource type="Texture2D" uid="uid://b4umug04l0vy8" path="res://sprites-bedroom/foguete.png" id="12_ys8or"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnpaw"]
+size = Vector2(272, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iexh"]
+size = Vector2(112, 192)
+
+[node name="Bedroom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 96.0
+offset_right = 40.0
+offset_bottom = 136.0
+
+[node name="Painel" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(360, 640)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_right = 320.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.909804, 0.490196, 0.792157, 0.956863)
+
+[node name="Piso" type="Sprite2D" parent="."]
+position = Vector2(180, 271.75)
+scale = Vector2(1.05572, 1.12402)
+texture = ExtResource("1_vd4eq")
+
+[node name="Parede" type="Sprite2D" parent="."]
+position = Vector2(180, -16.5)
+scale = Vector2(0.994475, 0.993151)
+texture = ExtResource("3_hl421")
+
+[node name="Moldura" type="Sprite2D" parent="."]
+position = Vector2(181.75, 276)
+scale = Vector2(1.03186, 1.6)
+texture = ExtResource("4_dmmha")
+
+[node name="Porta" type="Sprite2D" parent="."]
+position = Vector2(48, 0)
+texture = ExtResource("3_7tobb")
+
+[node name="Armario" type="Sprite2D" parent="."]
+position = Vector2(200, 16)
+texture = ExtResource("6_0i7ka")
+
+[node name="Janela" type="Sprite2D" parent="."]
+position = Vector2(304, -8)
+texture = ExtResource("6_xi74y")
+
+[node name="Cacto" type="Sprite2D" parent="."]
+position = Vector2(312, 0)
+texture = ExtResource("11_5eeb2")
+
+[node name="Poster" type="Sprite2D" parent="."]
+position = Vector2(120, -8)
+texture = ExtResource("5_oxgb3")
+
+[node name="Cadeira" type="Sprite2D" parent="."]
+position = Vector2(168, 528)
+texture = ExtResource("10_ydkvt")
+
+[node name="Escrivaninha" type="Sprite2D" parent="."]
+position = Vector2(176, 584)
+texture = ExtResource("8_ugkat")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Escrivaninha"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Escrivaninha/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vnpaw")
+
+[node name="Cama" type="Sprite2D" parent="."]
+position = Vector2(288, 304)
+texture = ExtResource("7_pb6jm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cama"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cama/StaticBody2D"]
+shape = SubResource("RectangleShape2D_8iexh")
+
+[node name="Foguete" type="Sprite2D" parent="."]
+position = Vector2(240, 592)
+texture = ExtResource("12_ys8or")
+
+[node name="Computador" type="Sprite2D" parent="."]
+position = Vector2(104, 584)
+texture = ExtResource("9_raq40")
