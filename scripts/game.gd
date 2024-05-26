@@ -39,7 +39,7 @@ func _ready():
 			if i == empty_position.x and j == empty_position.y:
 				row.append(null)
 				continue
-			var tile_scene = preload("res://scenes/tile.tscn")
+			var tile_scene = preload("res://scenes/tictactoe.tscn")
 			var tile = tile_scene.instance()
 			tile.position_in_grid = Vector2(i, j)
 			tile.game = self

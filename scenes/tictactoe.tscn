@@ -1,14 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://bolr7mm0j2bgv"]
 
-[ext_resource type="Script" path="res://scripts/tictactoe.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/tictactoe.gd" id="1_xvayx"]
 
-[node name="Tile" type="TextureButton"]
-margin_right = 28.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 28, 28 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TileSprite" type="Sprite" parent="."]
+[node name="Tictactoe" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+script = ExtResource("1_xvayx")
