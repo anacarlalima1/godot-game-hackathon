@@ -1,22 +1,22 @@
 [gd_scene load_steps=19 format=3 uid="uid://c1bmeuxxfnnkr"]
 
-[ext_resource type="Texture2D" uid="uid://jc3bkylrw46h" path="res://sprites-puzzle/tile1.png" id="1_36hfm"]
 [ext_resource type="Script" path="res://scripts/sliding_puzzle.gd" id="1_oy4l6"]
-[ext_resource type="Texture2D" uid="uid://helxtdx12gq" path="res://sprites-puzzle/tile2.png" id="2_fs8kk"]
-[ext_resource type="Texture2D" uid="uid://b5wwvfn3vh56g" path="res://sprites-puzzle/tile3.png" id="3_mxmpq"]
-[ext_resource type="Texture2D" uid="uid://doblu48yj0p64" path="res://sprites-puzzle/tile4.png" id="4_ofevt"]
-[ext_resource type="Texture2D" uid="uid://demmlf41th6dq" path="res://sprites-puzzle/tile5.png" id="5_5wb4g"]
-[ext_resource type="Texture2D" uid="uid://cmjeoxkuttwsw" path="res://sprites-puzzle/tile6.png" id="6_rhtfg"]
-[ext_resource type="Texture2D" uid="uid://cnmmju5rrxk3u" path="res://sprites-puzzle/tile7.png" id="7_gttrl"]
-[ext_resource type="Texture2D" uid="uid://b5cedw1jfsveq" path="res://sprites-puzzle/tile8.png" id="8_t0olp"]
-[ext_resource type="Texture2D" uid="uid://b53wq7cf64xm3" path="res://sprites-puzzle/tile9.png" id="9_bf0pv"]
-[ext_resource type="Texture2D" uid="uid://dcyetkp1skfrg" path="res://sprites-puzzle/tile10.png" id="10_a8s5f"]
-[ext_resource type="Texture2D" uid="uid://bacnibjusdidb" path="res://sprites-puzzle/tile11.png" id="11_qgtju"]
-[ext_resource type="Texture2D" uid="uid://cpfwrmfw8bepa" path="res://sprites-puzzle/tile12.png" id="12_1c5up"]
-[ext_resource type="Texture2D" uid="uid://ou81jtt76k1n" path="res://sprites-puzzle/tile13.png" id="13_87pxm"]
-[ext_resource type="Texture2D" uid="uid://yntf8qqbreod" path="res://sprites-puzzle/tile14.png" id="14_lb5i0"]
-[ext_resource type="Texture2D" uid="uid://bx2eh4svm7gvc" path="res://sprites-puzzle/tile15.png" id="15_epusd"]
-[ext_resource type="Texture2D" uid="uid://csn8jjfh6nc0" path="res://sprites-puzzle/empty.png" id="16_fnwmx"]
+[ext_resource type="Texture2D" uid="uid://ccyy4vmualhhu" path="res://sprites-puzzle/Tile1.png" id="3_12g0q"]
+[ext_resource type="Texture2D" uid="uid://cwego1tn0ffck" path="res://sprites-puzzle/Tile2.png" id="4_cwn22"]
+[ext_resource type="Texture2D" uid="uid://v1upcyo4al03" path="res://sprites-puzzle/Tile3.png" id="5_va4rh"]
+[ext_resource type="Texture2D" uid="uid://bn7m10aarv3np" path="res://sprites-puzzle/Tile4.png" id="6_lhf5j"]
+[ext_resource type="Texture2D" uid="uid://dn8ccaaau1lxd" path="res://sprites-puzzle/Tile6.png" id="7_lmfr2"]
+[ext_resource type="Texture2D" uid="uid://d1imhfqgbe604" path="res://sprites-puzzle/Tile5.png" id="7_mc2a2"]
+[ext_resource type="Texture2D" uid="uid://bhabryy47k866" path="res://sprites-puzzle/Tile7.png" id="8_er8xe"]
+[ext_resource type="Texture2D" uid="uid://c1vxvyh7rcay" path="res://sprites-puzzle/Tile8.png" id="9_hq5m8"]
+[ext_resource type="Texture2D" uid="uid://cla76eprcf6ro" path="res://sprites-puzzle/Tile9.png" id="10_85nff"]
+[ext_resource type="Texture2D" uid="uid://ddphft0iif4sx" path="res://sprites-puzzle/Tile10.png" id="11_gnwah"]
+[ext_resource type="Texture2D" uid="uid://lomqyc0icogm" path="res://sprites-puzzle/Tile11.png" id="12_x54nw"]
+[ext_resource type="Texture2D" uid="uid://dv6n1062qtrgl" path="res://sprites-puzzle/Tile12.png" id="13_i8t06"]
+[ext_resource type="Texture2D" uid="uid://euwqnibtm1fk" path="res://sprites-puzzle/Tile13.png" id="14_0lvp2"]
+[ext_resource type="Texture2D" uid="uid://bjqsm7nje4c35" path="res://sprites-puzzle/Tile14.png" id="15_1wd71"]
+[ext_resource type="Texture2D" uid="uid://b4gcotgqtkwb3" path="res://sprites-puzzle/Tile15.png" id="16_v6ui6"]
+[ext_resource type="Texture2D" uid="uid://csn8jjfh6nc0" path="res://sprites-puzzle/Tile16.png" id="17_i255n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wly4d"]
 
@@ -27,81 +27,66 @@ script = ExtResource("1_oy4l6")
 shape = SubResource("RectangleShape2D_wly4d")
 
 [node name="Tile1" type="Sprite2D" parent="."]
-position = Vector2(45, 187)
-scale = Vector2(0.358, 0.358)
-texture = ExtResource("1_36hfm")
+position = Vector2(45, 45)
+texture = ExtResource("3_12g0q")
 
 [node name="Tile2" type="Sprite2D" parent="."]
-position = Vector2(135, 187)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("2_fs8kk")
+position = Vector2(135, 45)
+texture = ExtResource("4_cwn22")
 
 [node name="Tile3" type="Sprite2D" parent="."]
-position = Vector2(225, 187)
-scale = Vector2(0.358, 0.358)
-texture = ExtResource("3_mxmpq")
+position = Vector2(225, 45)
+texture = ExtResource("5_va4rh")
 
 [node name="Tile4" type="Sprite2D" parent="."]
-position = Vector2(315, 187)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("4_ofevt")
+position = Vector2(315, 45)
+texture = ExtResource("6_lhf5j")
 
 [node name="Tile5" type="Sprite2D" parent="."]
-position = Vector2(45, 277)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("5_5wb4g")
+position = Vector2(45, 135)
+texture = ExtResource("7_mc2a2")
 
 [node name="Tile6" type="Sprite2D" parent="."]
-position = Vector2(135, 277)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("6_rhtfg")
+position = Vector2(135, 135)
+texture = ExtResource("7_lmfr2")
 
 [node name="Tile7" type="Sprite2D" parent="."]
-position = Vector2(225, 277)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("7_gttrl")
+position = Vector2(225, 135)
+texture = ExtResource("8_er8xe")
 
 [node name="Tile8" type="Sprite2D" parent="."]
-position = Vector2(315, 277)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("8_t0olp")
+position = Vector2(315, 135)
+texture = ExtResource("9_hq5m8")
 
 [node name="Tile9" type="Sprite2D" parent="."]
-position = Vector2(45, 367)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("9_bf0pv")
+position = Vector2(45, 225)
+texture = ExtResource("10_85nff")
 
 [node name="Tile10" type="Sprite2D" parent="."]
-position = Vector2(135, 367)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("10_a8s5f")
+position = Vector2(135, 225)
+texture = ExtResource("11_gnwah")
 
 [node name="Tile11" type="Sprite2D" parent="."]
-position = Vector2(225, 367)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("11_qgtju")
+position = Vector2(225, 225)
+texture = ExtResource("12_x54nw")
 
 [node name="Tile12" type="Sprite2D" parent="."]
-position = Vector2(315, 367)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("12_1c5up")
+position = Vector2(315, 225)
+texture = ExtResource("13_i8t06")
 
 [node name="Tile13" type="Sprite2D" parent="."]
-position = Vector2(45, 457)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("13_87pxm")
+position = Vector2(45, 315)
+texture = ExtResource("14_0lvp2")
 
 [node name="Tile14" type="Sprite2D" parent="."]
-position = Vector2(135, 457)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("14_lb5i0")
+position = Vector2(135, 315)
+texture = ExtResource("15_1wd71")
 
 [node name="Tile15" type="Sprite2D" parent="."]
-position = Vector2(225, 457)
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("15_epusd")
+position = Vector2(225, 315)
+texture = ExtResource("16_v6ui6")
 
 [node name="Tile16" type="Sprite2D" parent="."]
-position = Vector2(315, 457)
+position = Vector2(315, 315)
 scale = Vector2(0.36, 0.36)
-texture = ExtResource("16_fnwmx")
+texture = ExtResource("17_i255n")
