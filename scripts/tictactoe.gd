@@ -67,8 +67,9 @@ func _rearrange_tiles():
 	for i in range(grid_size):
 		for j in range(grid_size):
 			if tiles[i][j] != null:
-				var button_size = tiles[i][j].get_size()
-				tiles[i][j].position = Vector2(j * button_size.x, i * button_size.y)
+				print('min', tiles[i][j].rect_min_size)
+				# tiles[i][j].rect_min_size = Vector2(64, 64)  # Define o tamanho mínimo do botão
+				# tiles[i][j].rect_position = Vector2(j * 64, i * 64)  # Ajusta a posição do botão no GridContainer
 
 func check_sequence():
 	for i in range(grid_size):
