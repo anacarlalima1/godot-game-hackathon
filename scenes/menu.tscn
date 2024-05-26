@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6cuocspeugx"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_mt1st"]
+[ext_resource type="Texture2D" uid="uid://8fs23c6k3j8s" path="res://sprites-menu/menu 1.png" id="1_nqt56"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mt1st")
+
+[node name="Capa" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 361.0
+offset_bottom = 657.0
+texture_normal = ExtResource("1_nqt56")
+
+[node name="Inicio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="History" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

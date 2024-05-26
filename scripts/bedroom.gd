@@ -1,19 +1,28 @@
-extends Node2D
+extends Control
+
+var book: AnimatedSprite2D
+var timer: Timer
 
 func _ready():
-	# Obter as dimensões da viewport
-	var viewport_size = get_viewport_rect().size
-	
-	# Ajustar o tamanho e posição do TextureRect "Wall" para cobrir a parte superior da tela
-	var wall = $Wall
-	wall.rect_min_size = viewport_size
-	wall.rect_size = Vector2(viewport_size.x, viewport_size.y * 0.5)
-	wall.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	wall.rect_position = Vector2(0, 0)  # Posição na parte superior
+	book = $Livro
+	timer = Timer.new()
+	add_child(timer)
 
-	# Ajustar o tamanho e posição do TextureRect "Floor" para cobrir a parte inferior da tela
-	var floor = $Floor
-	floor.rect_min_size = viewport_size
-	floor.rect_size = Vector2(viewport_size.x, viewport_size.y * 0.5)
-	floor.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	floor.rect_position = Vector2(0, viewport_size.y * 0.5)  # Posição na parte inferior
+	# Inicialmente, o livro é visível e fechado
+	book.play("book_closed")
+	print("Script está pronto.")
+
+func _input(event):
+	if event is InputEventKey and event.pressed and event.keycode == Key.KEY_A:
+		print("Tecla A pressionada.")
+		if book.animation == "book_closed":
+			book.play("book_open")
+			print("Livro foi aberto!")
+			timer.wait_time = 2.0  # Define o tempo de espera em segundos
+			timer.one_shot = true
+			timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+			timer.start()
+
+func _on_timer_timeout():
+	print("Mudando para a próxima cena.")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

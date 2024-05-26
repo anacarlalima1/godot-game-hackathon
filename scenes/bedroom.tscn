@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://ce2b215fqxjil"]
+[gd_scene load_steps=21 format=3 uid="uid://ce2b215fqxjil"]
 
+[ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_2ql8c"]
 [ext_resource type="Texture2D" uid="uid://cb1bap5anlw2k" path="res://sprites-bedroom/piso.png" id="1_a11yt"]
 [ext_resource type="Texture2D" uid="uid://dlyag7n57pk2l" path="res://sprites-bedroom/parede.png" id="2_274e4"]
 [ext_resource type="Texture2D" uid="uid://dkcjnjbq62yt0" path="res://sprites-bedroom/moldura.png" id="3_mv8h8"]
@@ -13,12 +14,48 @@
 [ext_resource type="Texture2D" uid="uid://dn22gcmacr3h" path="res://sprites-bedroom/cama.png" id="11_hcwm4"]
 [ext_resource type="Texture2D" uid="uid://b4umug04l0vy8" path="res://sprites-bedroom/foguete.png" id="12_ysmat"]
 [ext_resource type="Texture2D" uid="uid://dkx5swbjnjjjm" path="res://sprites-bedroom/computador.png" id="13_k60cl"]
+[ext_resource type="Texture2D" uid="uid://cdmytbwhw8y78" path="res://sprites-bedroom/presente-fechado.png" id="14_cyyct"]
+[ext_resource type="Texture2D" uid="uid://bsvqw4k3m5yn7" path="res://sprites-bedroom/presente-aberto.png" id="15_cpeug"]
+[ext_resource type="Texture2D" uid="uid://btdu3fcx1ppmb" path="res://sprites-bedroom/livro-fechado.png" id="16_y13wc"]
+[ext_resource type="Texture2D" uid="uid://4ydfw5jqo8f8" path="res://sprites-bedroom/livro-aberto.png" id="17_d22g4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnpaw"]
-size = Vector2(272, 80)
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2eja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_y13wc")
+}],
+"loop": true,
+"name": &"book_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_d22g4")
+}],
+"loop": true,
+"name": &"book_open",
+"speed": 5.0
+}]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iexh"]
-size = Vector2(112, 192)
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdrcm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_cyyct")
+}],
+"loop": true,
+"name": &"present_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_cpeug")
+}],
+"loop": true,
+"name": &"present_open",
+"speed": 5.0
+}]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -26,6 +63,7 @@ anchors_preset = 0
 offset_top = 96.0
 offset_right = 40.0
 offset_bottom = 136.0
+script = ExtResource("1_2ql8c")
 
 [node name="Painel" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(360, 640)
@@ -83,24 +121,25 @@ texture = ExtResource("9_vxjwm")
 position = Vector2(176, 584)
 texture = ExtResource("10_8eg1a")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Escrivaninha"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escrivaninha/StaticBody2D"]
-shape = SubResource("RectangleShape2D_vnpaw")
-
 [node name="Cama" type="Sprite2D" parent="."]
 position = Vector2(288, 304)
 texture = ExtResource("11_hcwm4")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cama"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cama/StaticBody2D"]
-shape = SubResource("RectangleShape2D_8iexh")
-
 [node name="Foguete" type="Sprite2D" parent="."]
-position = Vector2(240, 592)
+position = Vector2(264, 592)
 texture = ExtResource("12_ysmat")
 
 [node name="Computador" type="Sprite2D" parent="."]
-position = Vector2(104, 584)
+position = Vector2(80, 584)
 texture = ExtResource("13_k60cl")
+
+[node name="Livro" type="AnimatedSprite2D" parent="."]
+position = Vector2(176, 576)
+sprite_frames = SubResource("SpriteFrames_y2eja")
+animation = &"book_closed"
+
+[node name="Presente" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(160, 576)
+sprite_frames = SubResource("SpriteFrames_bdrcm")
+animation = &"present_closed"
