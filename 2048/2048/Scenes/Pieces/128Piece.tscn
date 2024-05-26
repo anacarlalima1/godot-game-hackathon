@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2048/Assets/128 Tile.png" type="Texture" id=1]
+[ext_resource path="res://2048/Scenes/Piece.tscn" type="PackedScene" id=2]
+
+[node name="128Piece" instance=ExtResource( 2 )]
+value = 128
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 1 )

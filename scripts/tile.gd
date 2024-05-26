@@ -9,8 +9,7 @@ var sprite  # Referência ao Sprite
 # Função chamada quando o nó está pronto
 func _ready():
 	sprite = $TileSprite  # Obtenha a referência ao Sprite
-	connect("pressed", self, "_on_tile_pressed")
-	expand = true
+	connect("pressed", Callable(self, "_on_tile_pressed"))
 	_adjust_button_and_sprite()
 
 # Função chamada quando o tile é pressionado
@@ -27,7 +26,7 @@ func set_texture(texture):
 func _adjust_button_and_sprite():
 	if sprite.texture:
 		var texture_size = sprite.texture.get_size()
-		var button_size = rect_min_size
+		var button_size = custom_minimum_size
 		var scale_x = button_size.x / texture_size.x
 		var scale_y = button_size.y / texture_size.y
 		var scale_factor = min(scale_x, scale_y)
@@ -37,4 +36,4 @@ func _adjust_button_and_sprite():
 
 # Função para ajustar o tamanho mínimo do botão
 func set_button_size(size: Vector2):
-	rect_min_size = size
+	custom_minimum_size = size
