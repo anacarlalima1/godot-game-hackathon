@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=3 uid="uid://ce2b215fqxjil"]
 
-[ext_resource type="Texture2D" uid="uid://cb1bap5anlw2k" path="res://sprites-bedroom/piso.png" id="1_vd4eq"]
-[ext_resource type="Texture2D" uid="uid://02bhbglp4w3e" path="res://sprites-bedroom/porta.png" id="3_7tobb"]
-[ext_resource type="Texture2D" uid="uid://dlyag7n57pk2l" path="res://sprites-bedroom/parede.png" id="3_hl421"]
-[ext_resource type="Texture2D" uid="uid://dkcjnjbq62yt0" path="res://sprites-bedroom/moldura.png" id="4_dmmha"]
-[ext_resource type="Texture2D" uid="uid://d24e2lhrdkc5e" path="res://sprites-bedroom/poster.png" id="5_oxgb3"]
-[ext_resource type="Texture2D" uid="uid://dit0rvux0sws" path="res://sprites-bedroom/armario.png" id="6_0i7ka"]
-[ext_resource type="Texture2D" uid="uid://bbgrjs8aui6a8" path="res://sprites-bedroom/janela.png" id="6_xi74y"]
-[ext_resource type="Texture2D" uid="uid://dn22gcmacr3h" path="res://sprites-bedroom/cama.png" id="7_pb6jm"]
-[ext_resource type="Texture2D" uid="uid://becd7qwo0qops" path="res://sprites-bedroom/escrivaninha.png" id="8_ugkat"]
-[ext_resource type="Texture2D" uid="uid://dkx5swbjnjjjm" path="res://sprites-bedroom/computador.png" id="9_raq40"]
-[ext_resource type="Texture2D" uid="uid://db5ax5uejyvl" path="res://sprites-bedroom/cadeira.png" id="10_ydkvt"]
-[ext_resource type="Texture2D" uid="uid://bwuy6uxt3y51q" path="res://sprites-bedroom/cacto.png" id="11_5eeb2"]
-[ext_resource type="Texture2D" uid="uid://b4umug04l0vy8" path="res://sprites-bedroom/foguete.png" id="12_ys8or"]
+[ext_resource type="Texture2D" uid="uid://cb1bap5anlw2k" path="res://sprites-bedroom/piso.png" id="1_a11yt"]
+[ext_resource type="Texture2D" uid="uid://dlyag7n57pk2l" path="res://sprites-bedroom/parede.png" id="2_274e4"]
+[ext_resource type="Texture2D" uid="uid://dkcjnjbq62yt0" path="res://sprites-bedroom/moldura.png" id="3_mv8h8"]
+[ext_resource type="Texture2D" uid="uid://02bhbglp4w3e" path="res://sprites-bedroom/porta.png" id="4_5ye4e"]
+[ext_resource type="Texture2D" uid="uid://dit0rvux0sws" path="res://sprites-bedroom/armario.png" id="5_rmq1g"]
+[ext_resource type="Texture2D" uid="uid://bbgrjs8aui6a8" path="res://sprites-bedroom/janela.png" id="6_w7mf1"]
+[ext_resource type="Texture2D" uid="uid://bwuy6uxt3y51q" path="res://sprites-bedroom/cacto.png" id="7_ufw1q"]
+[ext_resource type="Texture2D" uid="uid://d24e2lhrdkc5e" path="res://sprites-bedroom/poster.png" id="8_6h1kw"]
+[ext_resource type="Texture2D" uid="uid://db5ax5uejyvl" path="res://sprites-bedroom/cadeira.png" id="9_vxjwm"]
+[ext_resource type="Texture2D" uid="uid://becd7qwo0qops" path="res://sprites-bedroom/escrivaninha.png" id="10_8eg1a"]
+[ext_resource type="Texture2D" uid="uid://dn22gcmacr3h" path="res://sprites-bedroom/cama.png" id="11_hcwm4"]
+[ext_resource type="Texture2D" uid="uid://b4umug04l0vy8" path="res://sprites-bedroom/foguete.png" id="12_ysmat"]
+[ext_resource type="Texture2D" uid="uid://dkx5swbjnjjjm" path="res://sprites-bedroom/computador.png" id="13_k60cl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnpaw"]
 size = Vector2(272, 80)
@@ -43,45 +43,45 @@ color = Color(0.909804, 0.490196, 0.792157, 0.956863)
 [node name="Piso" type="Sprite2D" parent="."]
 position = Vector2(180, 271.75)
 scale = Vector2(1.05572, 1.12402)
-texture = ExtResource("1_vd4eq")
+texture = ExtResource("1_a11yt")
 
 [node name="Parede" type="Sprite2D" parent="."]
 position = Vector2(180, -16.5)
 scale = Vector2(0.994475, 0.993151)
-texture = ExtResource("3_hl421")
+texture = ExtResource("2_274e4")
 
 [node name="Moldura" type="Sprite2D" parent="."]
 position = Vector2(181.75, 276)
 scale = Vector2(1.03186, 1.6)
-texture = ExtResource("4_dmmha")
+texture = ExtResource("3_mv8h8")
 
 [node name="Porta" type="Sprite2D" parent="."]
 position = Vector2(48, 0)
-texture = ExtResource("3_7tobb")
+texture = ExtResource("4_5ye4e")
 
 [node name="Armario" type="Sprite2D" parent="."]
 position = Vector2(200, 16)
-texture = ExtResource("6_0i7ka")
+texture = ExtResource("5_rmq1g")
 
 [node name="Janela" type="Sprite2D" parent="."]
 position = Vector2(304, -8)
-texture = ExtResource("6_xi74y")
+texture = ExtResource("6_w7mf1")
 
 [node name="Cacto" type="Sprite2D" parent="."]
 position = Vector2(312, 0)
-texture = ExtResource("11_5eeb2")
+texture = ExtResource("7_ufw1q")
 
 [node name="Poster" type="Sprite2D" parent="."]
 position = Vector2(120, -8)
-texture = ExtResource("5_oxgb3")
+texture = ExtResource("8_6h1kw")
 
 [node name="Cadeira" type="Sprite2D" parent="."]
 position = Vector2(168, 528)
-texture = ExtResource("10_ydkvt")
+texture = ExtResource("9_vxjwm")
 
 [node name="Escrivaninha" type="Sprite2D" parent="."]
 position = Vector2(176, 584)
-texture = ExtResource("8_ugkat")
+texture = ExtResource("10_8eg1a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Escrivaninha"]
 
@@ -90,7 +90,7 @@ shape = SubResource("RectangleShape2D_vnpaw")
 
 [node name="Cama" type="Sprite2D" parent="."]
 position = Vector2(288, 304)
-texture = ExtResource("7_pb6jm")
+texture = ExtResource("11_hcwm4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cama"]
 
@@ -99,8 +99,8 @@ shape = SubResource("RectangleShape2D_8iexh")
 
 [node name="Foguete" type="Sprite2D" parent="."]
 position = Vector2(240, 592)
-texture = ExtResource("12_ys8or")
+texture = ExtResource("12_ysmat")
 
 [node name="Computador" type="Sprite2D" parent="."]
 position = Vector2(104, 584)
-texture = ExtResource("9_raq40")
+texture = ExtResource("13_k60cl")

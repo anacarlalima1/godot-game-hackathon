@@ -1,0 +1,131 @@
+[gd_scene load_steps=19 format=3 uid="uid://5t4p8hlmcgox"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_4uj81"]
+[ext_resource type="Texture2D" uid="uid://dfoh7i4fovffx" path="res://sprites-player/personagem principal- costas.png" id="2_aised"]
+[ext_resource type="Texture2D" uid="uid://2ldoiijqi23e" path="res://sprites-player/personagem principal- costas andar 1.png" id="3_urmha"]
+[ext_resource type="Texture2D" uid="uid://ka0ffgt4d8wt" path="res://sprites-player/personagem principal- costas andar 2.png" id="4_8jkel"]
+[ext_resource type="Texture2D" uid="uid://bpgm0dqowyupv" path="res://sprites-player/personagem principal-frente susto.png" id="5_caq2n"]
+[ext_resource type="Texture2D" uid="uid://cmohnayvuunfu" path="res://sprites-player/personagem principal-frente dormindo 1.png" id="6_nhw66"]
+[ext_resource type="Texture2D" uid="uid://callryuwykqof" path="res://sprites-player/personagem principal-frente dormindo 2.png" id="7_vjlu7"]
+[ext_resource type="Texture2D" uid="uid://jbeys43lmrts" path="res://sprites-player/personagem principal-frente parada.png" id="8_hli6u"]
+[ext_resource type="Texture2D" uid="uid://c45h8qufe8g5d" path="res://sprites-player/personagem principal- lateral parada esquerda.png" id="9_8ylsl"]
+[ext_resource type="Texture2D" uid="uid://c0dl61i8mx7uv" path="res://sprites-player/personagem principal- lateral parada direita.png" id="10_cyeqv"]
+[ext_resource type="Texture2D" uid="uid://crggaatebuv22" path="res://sprites-player/personagem principal- frente andar 1.png" id="11_5dcp1"]
+[ext_resource type="Texture2D" uid="uid://cfkk6ay1r0glp" path="res://sprites-player/personagem principal- frente andar 2.png" id="12_yest5"]
+[ext_resource type="Texture2D" uid="uid://d2ms78ukauyl3" path="res://sprites-player/personagem principal- lateral andar esquerda 1.png" id="13_spg5m"]
+[ext_resource type="Texture2D" uid="uid://dl7jm10gr1l5w" path="res://sprites-player/personagem principal- lateral andar esquerda 2.png" id="14_f5lcf"]
+[ext_resource type="Texture2D" uid="uid://b2t8hv448ssxr" path="res://sprites-player/personagem principal- lateral andar direita 1.png" id="15_0d6f6"]
+[ext_resource type="Texture2D" uid="uid://qmjyoxmgv7m2" path="res://sprites-player/personagem principal- lateral andar direita 2.png" id="16_cujko"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nylkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aised")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_urmha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8jkel")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_caq2n")
+}],
+"loop": true,
+"name": &"scared",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nhw66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vjlu7")
+}],
+"loop": true,
+"name": &"sleeping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hli6u")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_8ylsl")
+}],
+"loop": true,
+"name": &"stop_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cyeqv")
+}],
+"loop": true,
+"name": &"stop_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5dcp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yest5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_spg5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_f5lcf")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_0d6f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cujko")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24vo2"]
+radius = 48.0
+height = 128.0
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_4uj81")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nylkv")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_24vo2")

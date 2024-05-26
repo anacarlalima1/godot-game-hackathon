@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2c8wlcd3s5dy"]
+
+[ext_resource type="PackedScene" uid="uid://ce2b215fqxjil" path="res://scenes/bedroom.tscn" id="1_ibmkt"]
+[ext_resource type="PackedScene" uid="uid://5t4p8hlmcgox" path="res://scenes/player.tscn" id="2_y8ci3"]
+
+[node name="Main" type="Node"]
+
+[node name="Bedroom" parent="." instance=ExtResource("1_ibmkt")]
+
+[node name="Player" parent="." instance=ExtResource("2_y8ci3")]
