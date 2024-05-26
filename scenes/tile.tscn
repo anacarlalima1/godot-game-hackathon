@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dueiv2ryywqs1"]
+[gd_scene load_steps=2 format=3 uid="uid://b8e8yj4qhkiog"]
 
 [ext_resource type="Script" path="res://scripts/tile.gd" id="1_hrkln"]
 
@@ -9,4 +9,3 @@ stretch_mode = 0
 script = ExtResource("1_hrkln")
 
 [node name="TileSprite" type="Sprite2D" parent="."]
-position = Vector2(80, 72)

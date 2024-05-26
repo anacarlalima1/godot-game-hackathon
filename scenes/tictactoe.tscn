@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bkr3lj7gysk7r"]
+[gd_scene format=3 uid="uid://bolr7mm0j2bgv"]
 
 [node name="Tictactoe" type="GridContainer"]
 offset_right = 40.0
