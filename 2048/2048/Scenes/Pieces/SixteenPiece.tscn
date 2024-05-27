@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2048/Scenes/Piece.tscn" type="PackedScene" id=1]
+[ext_resource path="res://2048/Assets/16 Tile.png" type="Texture" id=2]
+
+[node name="SixteenPiece" instance=ExtResource( 1 )]
+value = 16
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 34.0384, 34.2053 )
+texture = ExtResource( 2 )
