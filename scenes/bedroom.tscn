@@ -139,7 +139,6 @@ sprite_frames = SubResource("SpriteFrames_y2eja")
 animation = &"book_closed"
 
 [node name="Presente" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(160, 576)
+position = Vector2(168, 576)
 sprite_frames = SubResource("SpriteFrames_bdrcm")
 animation = &"present_closed"

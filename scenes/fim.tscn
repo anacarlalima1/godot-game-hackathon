@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdvwp5jl2fy01"]
+
+[ext_resource type="Script" path="res://scripts/fim.gd" id="1_g5aq2"]
+[ext_resource type="Texture2D" uid="uid://3xhe6dl4w5sa" path="res://sprites-menu/fim do jogo-03.png" id="2_o384q"]
+
+[node name="Fim" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g5aq2")
+
+[node name="Fim" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_o384q")

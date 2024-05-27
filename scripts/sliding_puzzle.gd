@@ -19,7 +19,7 @@ func start_game():
 func shuffle_tiles():
 	var previous = 99
 	var previous_1 = 98
-	for t in range(0,300):
+	for t in range(0,10):
 		var tile = randi() % 16
 		if tiles[tile] != $Tile16 and tile != previous and tile != previous_1:
 			var rows = int((tiles[tile].position.y - 140) / 90)  # Ajusta o cálculo das linhas
@@ -41,6 +41,7 @@ func _process(delta):
 		check_neighbours(rows,cols)
 		if tiles == solved:
 			print("You win!")
+			get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
 
 func check_neighbours(rows, cols):
 	var empty = false

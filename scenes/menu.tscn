@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://be6cuocspeugx"]
+[gd_scene load_steps=7 format=3 uid="uid://be6cuocspeugx"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_mt1st"]
-[ext_resource type="Texture2D" uid="uid://8fs23c6k3j8s" path="res://sprites-menu/menu 1.png" id="1_nqt56"]
+[ext_resource type="Texture2D" uid="uid://8fs23c6k3j8s" path="res://sprites-menu/menu 1.png" id="2_vt5cm"]
+[ext_resource type="Texture2D" uid="uid://4jt28xb31d67" path="res://sprites-menu/menu 2.png" id="3_ljnxk"]
+[ext_resource type="Texture2D" uid="uid://5i76geqc5byl" path="res://sprites-menu/menu 3.png" id="4_u55lw"]
+[ext_resource type="Texture2D" uid="uid://52mfapd0df4x" path="res://sprites-menu/ada lovelace_retrato.png" id="5_43m83"]
+[ext_resource type="Texture2D" uid="uid://bk2ym14yj8f6x" path="res://sprites-menu/desafio_prancheta.png" id="6_rttnw"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -15,14 +19,26 @@ layout_mode = 0
 offset_top = 16.0
 offset_right = 361.0
 offset_bottom = 657.0
-texture_normal = ExtResource("1_nqt56")
+texture_normal = ExtResource("2_vt5cm")
 
 [node name="Inicio" type="TextureButton" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture_normal = ExtResource("3_ljnxk")
 
 [node name="History" type="TextureButton" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture_normal = ExtResource("4_u55lw")
+
+[node name="AdaLovelaceRetrato" type="Sprite2D" parent="History"]
+position = Vector2(80, 96)
+texture = ExtResource("5_43m83")
+
+[node name="Desafio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("6_rttnw")

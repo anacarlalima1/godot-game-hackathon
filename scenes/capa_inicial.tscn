@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2wtwmyufoxr0"]
+
+[ext_resource type="Script" path="res://scripts/inicio.gd" id="1_pv0oc"]
+[ext_resource type="Texture2D" uid="uid://bh0u5kpoyj8ad" path="res://sprites-menu/capa_inicial.png" id="2_hq4j3"]
+
+[node name="CapaInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pv0oc")
+
+[node name="Inicio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_hq4j3")
